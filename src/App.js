@@ -1,5 +1,7 @@
 import React from "react";
-import Row from "./components/Row";
+import requests from "./components/movies/api";
+import Row from "./components/ MoviesList/Row";
+
 
 function App() {
   return <div>
@@ -8,9 +10,9 @@ function App() {
 
 
 
-<Row />
+<Row title="NETFLIX ORIGNALS" fetchUrl={requests.fetchNetflixOriginals}/>
 
-<Row />
+<Row title="TRENDING NOW"fetchUrl={requests.fetchTrending}/>
 
 
   </div>;
