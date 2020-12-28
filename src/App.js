@@ -2,7 +2,7 @@ import React from "react";
 import requests from "./components/movies/api";
 import Row from "./components/ MoviesList/Row";
 import { Banner } from "./components/Banner";
-
+import "./App.css"
 function App() {
   return (
     <div className="app">
