@@ -3,13 +3,14 @@ import requests from "./components/movies/api";
 import Row from "./components/ MoviesList/Row";
 import { Banner } from "./components/Banner";
 import "./App.css"
+import Nav from "./components/Nav";
 function App() {
   return (
     <div className="app">
       {/* navbar  */}
 
       {/* banner or slider  */}
-
+<Nav/>
       <Banner />
 
       <Row
