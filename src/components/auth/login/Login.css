@@ -1,0 +1,16 @@
+.login{
+position: absolute;
+height: 100%;
+}
+
+.login__back{
+
+}
+
+.login__logo{
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding-left: 20px;
+}
