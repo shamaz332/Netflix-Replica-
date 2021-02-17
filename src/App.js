@@ -1,32 +1,18 @@
 import React from "react";
-import requests from "./components/movies/api";
-import Row from "./components/ MoviesList/Row";
-import { Banner } from "./components/Banner";
-import "./App.css"
-import Nav from "./components/Nav";
-function App() {
+import "./App.css";
+import Home from "./components/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+const App = () => {
+  const navigation = useNavigate();
+
   return (
     <div className="app">
-      {/* navbar  */}
-
-      {/* banner or slider  */}
-<Nav/>
-      <Banner />
-
-      <Row
-        title="NETFLIX ORIGNALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Documentry Movies" fetchUrl={requests.fetchDocumentaries} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

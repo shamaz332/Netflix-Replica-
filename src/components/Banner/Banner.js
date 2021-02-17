@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import requests from "./movies/api";
-import instance from "./movies/getReq";
+import requests from "../movies/api";
+import instance from "../movies/getReq";
 import "./Banner.css";
 export const Banner = () => {
   const [movie, setMovie] = useState([]);
@@ -30,7 +30,7 @@ export const Banner = () => {
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(
-            "https://image.tmdb.org/t/p/original${movie?.backdrop_path}"
+            "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
         )`,
         backgroundPosition: "center center",
       }}
